@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  background: #0d0d0d;
+  font-family: Arial, sans-serif;
+  color: white;
+  width: 360px;
+}
+
+.card {
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.header h1 {
+  font-size: 12px;
+  margin: 0;
+}
+
+.header p {
+  font-size: 10px;
+  color: gray;
+  margin: 0;
+}
+
+.badge {
+  margin-left: auto;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+.divider {
+  height: 1px;
+  background: #222;
+  margin: 10px 0;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.score-ring {
+  border: 2px solid gray;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.score-ring span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.score-ring p {
+  font-size: 10px;
+  color: gray;
+}
+
+.sender-box {
+  background: #1a1a1a;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.sender-box p {
+  font-size: 10px;
+  color: gray;
+  margin: 0;
+}
+
+.sender-box span {
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#blockBtn {
+  background: #333;
+  color: white;
+}
+
+#reportBtn {
+  background: red;
+  color: white;
+}

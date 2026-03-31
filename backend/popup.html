@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>ShieldMail AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="card">
+  
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">🛡</div>
+    <div>
+      <h1>SHIELDMAIL AI</h1>
+      <p>Threat Analysis</p>
+    </div>
+    <div id="status" class="badge">SAFE</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Score -->
+  <div class="score-container">
+    <div class="score-ring">
+      <span id="riskScore">0</span>
+      <p>Risk Score</p>
+    </div>
+  </div>
+
+  <!-- Sender -->
+  <div class="sender-box">
+    <p>Sender</p>
+    <span id="sender">-</span>
+  </div>
+
+  <!-- Subject -->
+  <div class="sender-box">
+    <p>Subject</p>
+    <span id="subject">-</span>
+  </div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <button id="blockBtn">🚫 Block</button>
+    <button id="reportBtn">⚠️ Report</button>
+  </div>
+
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

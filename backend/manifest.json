@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "ShieldMail AI",
+  "version": "1.0.0",
+  "description": "AI-powered email protection for Gmail.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+ "content_scripts": [
+  {
+    "matches": ["https://mail.google.com/*"],
+    "js": ["content.js"]
+  }
+]
+  ,
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ShieldMail AI",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
