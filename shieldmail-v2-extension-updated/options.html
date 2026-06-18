@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>ShieldMail AI — Settings</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d0d0d;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 32px;
+      width: 420px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .logo { font-size: 32px; }
+
+    .header h1 {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .header p {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #2a2a2a;
+      margin-bottom: 24px;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      background: #0d0d0d;
+      border: 1px solid #374151;
+      border-radius: 8px;
+      color: white;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      border-color: #3b82f6;
+    }
+
+    .hint {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 6px;
+    }
+
+    .save-btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .save-btn:hover { background: #1d4ed8; }
+
+    #toast {
+      display: none;
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .toast-success {
+      background: #14532d;
+      border: 1px solid #16a34a;
+      color: #86efac;
+    }
+
+    .toast-error {
+      background: #7f1d1d;
+      border: 1px solid #dc2626;
+      color: #fca5a5;
+    }
+
+    .info-box {
+      background: #0d0d0d;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    .info-box b { color: white; }
+  </style>
+</head>
+<body>
+
+<div class="card">
+
+  <div class="header">
+    <div class="logo">🛡</div>
+    <div>
+      <h1>SHIELDMAIL AI</h1>
+      <p>Alert Settings</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <label>Your Phone Number for SMS Alerts</label>
+  <input
+    type="tel"
+    id="phoneInput"
+    placeholder="+919711147334"
+    maxlength="15"
+  />
+  <p class="hint">Include country code — e.g. +91 for India, +1 for US</p>
+
+  <button class="save-btn" id="saveBtn">💾 Save & Activate Alerts</button>
+
+  <div id="toast"></div>
+
+  <div class="info-box">
+    <b>How it works:</b><br>
+    When ShieldMail detects a threat email with risk score above 60,
+    an SMS alert is sent to this number with the threat details and
+    what you should do to stay safe.
+  </div>
+
+</div>
+
+<script src="options.js"></script>
+</body>
+</html>
