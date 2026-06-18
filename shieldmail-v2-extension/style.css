@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  background: #0d0d0d;
+  font-family: Arial, sans-serif;
+  color: white;
+  width: 380px;
+}
+
+.card {
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo { font-size: 20px; }
+
+.header h1 {
+  font-size: 12px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.header p {
+  font-size: 10px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.badge {
+  margin-left: auto;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: bold;
+  background: #16a34a;
+  white-space: nowrap;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  background: #222;
+  margin: 10px 0;
+}
+
+/* ── Score Ring ── */
+.score-container {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.score-ring {
+  border: 3px solid #6b7280;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: border-color 0.3s;
+}
+
+.score-ring span {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.score-ring p {
+  font-size: 9px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ── Info Row (two boxes side by side) ── */
+.info-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.info-box {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+}
+
+.info-box p {
+  font-size: 9px;
+  color: #6b7280;
+  margin: 0 0 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-box span {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ── Data Boxes ── */
+.sender-box {
+  background: #1a1a1a;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #2a2a2a;
+}
+
+.sender-box p {
+  font-size: 9px;
+  color: #6b7280;
+  margin: 0 0 3px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sender-box span {
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.sender-box ul {
+  color: #e5e7eb;
+}
+
+.sender-box li {
+  margin-bottom: 3px;
+}
+
+/* ── Action Buttons ── */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+button {
+  flex: 1;
+  padding: 9px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#blockBtn {
+  background: #374151;
+  color: white;
+}
+
+#blockBtn:hover { background: #4b5563; }
+
+#reportBtn {
+  background: #dc2626;
+  color: white;
+}
+
+#reportBtn:hover { background: #ef4444; }
