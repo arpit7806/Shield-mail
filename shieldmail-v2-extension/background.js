@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((data, sender) => {
   }
 
   // Send to ShieldMail backend for AI analysis
-  fetch("http://localhost:3000/scan", {
+  fetch("https://shield-mail-x2r5.onrender.com/scan", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
