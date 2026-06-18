@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>ShieldMail AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="card">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">🛡</div>
+    <div>
+      <h1>SHIELDMAIL AI</h1>
+      <p>v2.0 — AI Threat Analysis</p>
+    </div>
+    <div id="status" class="badge">SAFE</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Risk Score Ring -->
+  <div class="score-container">
+    <div class="score-ring">
+      <span id="riskScore">—</span>
+      <p>Risk Score</p>
+    </div>
+  </div>
+
+  <!-- Threat Type + Confidence -->
+  <div class="info-row">
+    <div class="info-box">
+      <p>Threat Type</p>
+      <span id="threatType">—</span>
+    </div>
+    <div class="info-box">
+      <p>Confidence</p>
+      <span id="confidence">—</span>
+    </div>
+  </div>
+
+  <!-- Sender -->
+  <div class="sender-box">
+    <p>Sender</p>
+    <span id="sender">—</span>
+  </div>
+
+  <!-- Subject -->
+  <div class="sender-box">
+    <p>Subject</p>
+    <span id="subject">—</span>
+  </div>
+
+  <!-- What it can do -->
+  <div class="sender-box">
+    <p>⚠️ What This Threat Can Do</p>
+    <span id="whatItCanDo" style="font-size:11px; color:#fca5a5;">—</span>
+  </div>
+
+  <!-- What to do -->
+  <div class="sender-box">
+    <p>✅ What You Should Do</p>
+    <ul id="whatToDo" style="margin:4px 0 0 0; padding-left:14px; font-size:11px;"></ul>
+  </div>
+
+  <!-- Red Flags -->
+  <div class="sender-box">
+    <p>🚩 Key Red Flags</p>
+    <ul id="redFlags" style="margin:4px 0 0 0; padding-left:14px; font-size:11px; color:#fca5a5;"></ul>
+  </div>
+
+  <!-- URL Summary -->
+  <div class="sender-box">
+    <p>🔗 URL Analysis</p>
+    <span id="urlSummary" style="font-size:11px;">—</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <button id="blockBtn">🚫 Block</button>
+    <button id="reportBtn">⚠️ Report</button>
+  </div>
+
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
