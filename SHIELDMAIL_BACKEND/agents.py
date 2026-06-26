@@ -1,9 +1,8 @@
-from crewai import Agent, Task, Crew, Process
+from crewai import Agent, Task, Crew, Process, LLM
 try:
     from crewai.tools import tool
 except ImportError:
     from crewai_tools import tool
-from langchain_groq import ChatGroq
 import re
 import json
 import os
@@ -11,8 +10,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatGroq(
-    model="llama-3.1-8b-instant",
+llm = LLM(
+    model="groq/llama-3.1-8b-instant",
     api_key=os.getenv("GROQ_API_KEY"),
     temperature=0.2
 )
@@ -229,10 +228,6 @@ def build_score_task(agent, scan_task: Task) -> Task:
 # ─────────────────────────────────────────────
 
 def analyze_email(email_data: dict) -> dict:
-    """
-    Run the full CrewAI threat analysis pipeline on an email.
-    Returns a dict with threat score and full analysis.
-    """
     scanner = build_scanner_agent()
     scorer = build_scorer_agent()
 
@@ -248,14 +243,11 @@ def analyze_email(email_data: dict) -> dict:
 
     result = crew.kickoff()
 
-    # Parse the JSON output from the scorer
     try:
         raw = str(result)
-        # Strip markdown code fences if present
         raw = re.sub(r'```json|```', '', raw).strip()
         parsed = json.loads(raw)
     except json.JSONDecodeError:
-        # Fallback if model adds extra text
         match = re.search(r'\{.*\}', str(result), re.DOTALL)
         if match:
             parsed = json.loads(match.group())
