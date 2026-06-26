@@ -1,5 +1,8 @@
 from crewai import Agent, Task, Crew, Process
-from crewai.tools import tool
+try:
+    from crewai.tools import tool
+except ImportError:
+    from crewai_tools import tool
 from langchain_groq import ChatGroq
 import re
 import json
