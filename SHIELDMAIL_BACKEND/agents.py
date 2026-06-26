@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 llm = ChatGroq(
-    model="llama3-70b-8192",
+    model="groq/llama3-70b-8192",
     api_key=os.getenv("GROQ_API_KEY"),
     temperature=0.2
 )
