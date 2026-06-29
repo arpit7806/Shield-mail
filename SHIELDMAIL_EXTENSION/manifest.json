@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Sheidmail — AI Email Threat Detector",
+  "name": "ShieldMail — AI Email Threat Detector",
   "version": "1.0.0",
   "description": "Scans your Gmail emails for cyber threats using AI and gives a real-time threat score.",
 
