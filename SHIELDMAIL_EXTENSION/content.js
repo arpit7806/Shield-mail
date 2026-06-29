@@ -50,7 +50,7 @@ function showLoadingPopup() {
   popup.innerHTML = `
     <div id="sheidmail-inner">
       <div id="sheidmail-header">
-        <span id="sheidmail-logo">🛡️ Sheidmail</span>
+        <span id="sheidmail-logo">🛡️ ShieldMail</span>
         <button id="sheidmail-close">✕</button>
       </div>
       <div id="sheidmail-body">
@@ -86,7 +86,7 @@ function showResultPopup(data) {
   popup.innerHTML = `
     <div id="sheidmail-inner">
       <div id="sheidmail-header">
-        <span id="sheidmail-logo">🛡️ Sheidmail</span>
+        <span id="sheidmail-logo">🛡️ ShieldMail</span>
         <button id="sheidmail-close">✕</button>
       </div>
       <div id="sheidmail-body">
@@ -118,7 +118,7 @@ function showErrorPopup(msg) {
   popup.innerHTML = `
     <div id="sheidmail-inner">
       <div id="sheidmail-header">
-        <span id="sheidmail-logo">🛡️ Sheidmail</span>
+        <span id="sheidmail-logo">🛡️ ShieldMail</span>
         <button id="sheidmail-close">✕</button>
       </div>
       <div id="sheidmail-body">
@@ -291,8 +291,8 @@ async function analyzeCurrentEmail() {
     chrome.storage.local.set({ lastResult: data, lastEmail: emailData.subject });
 
   } catch (err) {
-    showErrorPopup('Could not reach Sheidmail API. Check your connection.');
-    console.error('[Sheidmail]', err);
+    showErrorPopup('Could not reach ShieldMail API. Check your connection.');
+    console.error('[ShieldMail]', err);
   } finally {
     isAnalyzing = false;
   }
